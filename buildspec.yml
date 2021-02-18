@@ -6,7 +6,7 @@ phases:
             nodejs: 10
         commands:
             - echo "installing something"
-            - ping www.google.co.uk
+            - yum update -y
     pre_build:
         commands:
             - echo "we are in the pre build phase"
