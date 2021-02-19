@@ -2,7 +2,7 @@ DO
 $do$
 BEGIN
    IF NOT EXISTS (
-      SELECT FROM pg_catalog.pg_roles  -- SELECT list can be empty for this
+      SELECT FROM pg_catalog.pg_roles
       WHERE  rolname = 'schema_user') THEN
 
         CREATE ROLE schema_user WITH
@@ -29,7 +29,7 @@ DO
 $do$
 BEGIN
    IF NOT EXISTS (
-      SELECT FROM pg_catalog.pg_roles  -- SELECT list can be empty for this
+      SELECT FROM pg_catalog.pg_roles
       WHERE  rolname = 'runtime_user') THEN
 
         CREATE ROLE runtime_user WITH

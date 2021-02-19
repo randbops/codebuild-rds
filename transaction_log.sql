@@ -2,7 +2,7 @@ DO
 $do$
 BEGIN
    IF NOT EXISTS (
-      SELECT FROM pg_catalog.pg_roles  -- SELECT list can be empty for this
+      SELECT FROM pg_catalog.pg_roles
       WHERE  rolname = 'schema_user') THEN
 
         CREATE ROLE schema_user WITH
@@ -13,7 +13,7 @@ BEGIN
         INHERIT
         NOREPLICATION
         CONNECTION LIMIT -1
-        PASSWORD 'PASSWORD HERE';
+        PASSWORD 'seine123';
 
         COMMENT ON ROLE schema_user IS 'User used by the UK ETS application to perform DB operations.';
 
@@ -29,7 +29,7 @@ DO
 $do$
 BEGIN
    IF NOT EXISTS (
-      SELECT FROM pg_catalog.pg_roles  -- SELECT list can be empty for this
+      SELECT FROM pg_catalog.pg_roles
       WHERE  rolname = 'runtime_user') THEN
 
         CREATE ROLE runtime_user WITH
@@ -40,7 +40,7 @@ BEGIN
         INHERIT
         NOREPLICATION
         CONNECTION LIMIT -1
-        PASSWORD 'PASSWORD HERE';
+        PASSWORD '$TRAN_RUNTIME';
 
         COMMENT ON ROLE runtime_user IS 'User used by the UK ETS application to perform DB operations.';
 
