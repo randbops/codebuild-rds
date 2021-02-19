@@ -1,0 +1,11 @@
+CREATE ROLE keycloak_user WITH
+LOGIN
+NOSUPERUSER
+NOCREATEDB
+NOCREATEROLE
+INHERIT
+NOREPLICATION
+CONNECTION LIMIT -1
+PASSWORD 'seine123';
+
+COMMENT ON ROLE keycloak_user IS 'User used by the UK ETS application to perform DB operations.';
