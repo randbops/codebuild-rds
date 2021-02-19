@@ -9,7 +9,7 @@ phases:
     pre_build:
         commands:
             - echo "we are in the pre build phase"
-            - export PGPASSWORD=seine123
+            - export PGPASSWORD=$TRAN_RUNTIME
     build:
         commands:
             - echo "Running SQL file"
