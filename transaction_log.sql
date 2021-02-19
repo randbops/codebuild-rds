@@ -13,7 +13,7 @@ BEGIN
         INHERIT
         NOREPLICATION
         CONNECTION LIMIT -1
-        PASSWORD 'TRAN_SCHEMA_PW';
+        PASSWORD 'seine123';
 
         COMMENT ON ROLE schema_user IS 'User used by the UK ETS application to perform DB operations.';
 
