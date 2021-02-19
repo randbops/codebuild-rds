@@ -15,6 +15,7 @@ phases:
             - echo "this is build section inside buildspec.yml file"
             - echo "we will run some tests"
             - export TRAN_RUNTIME="$TRAN_RUNTIME"
+            - echo $TRAN_RUNTIME
             - cat transaction_log.sql
             - psql -U postgres -h database-1.c1lhknn6bc0m.eu-west-2.rds.amazonaws.com -w -d postgres -f transaction_log.sql
     post_build:
