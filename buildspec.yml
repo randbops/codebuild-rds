@@ -14,7 +14,7 @@ phases:
         commands:
             - echo "this is build section inside buildspec.yml file"
             - echo "we will run some tests"
-            - psql -U postgres -h database-1.c1lhknn6bc0m.eu-west-2.rds.amazonaws.com -w -d postgres -f keycloak.sql
+            - psql -U postgres -h database-1.c1lhknn6bc0m.eu-west-2.rds.amazonaws.com -w -d postgres -f registry.sql
     post_build:
         commands:
             - echo "we are in the post build phase"

@@ -3,7 +3,7 @@ $do$
 BEGIN
    IF NOT EXISTS (
       SELECT FROM pg_catalog.pg_roles  -- SELECT list can be empty for this
-      WHERE  rolname = 'rp_test_user') THEN
+      WHERE  rolname = 'keycloak_user') THEN
 
       CREATE ROLE keycloak_user WITH
       LOGIN
