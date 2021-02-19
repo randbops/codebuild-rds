@@ -13,7 +13,7 @@ BEGIN
       INHERIT
       NOREPLICATION
       CONNECTION LIMIT -1
-      PASSWORD 'seine123';
+      PASSWORD 'KEYCLOAK_PW';
 
       COMMENT ON ROLE keycloak_user IS 'User used by the UK ETS application to perform DB operations.';
    END IF;

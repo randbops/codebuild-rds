@@ -13,7 +13,7 @@ phases:
         commands:
             - echo "this is build section inside buildspec.yml file"
             - echo "we will run some tests"
-            - export TRAN_RUNTIME="$TRAN_RUNTIME"
+#            - export TRAN_RUNTIME="$TRAN_RUNTIME"
             - bash run_sql.sh $TRAN_RUNTIME
     post_build:
         commands:
