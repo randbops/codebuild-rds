@@ -14,6 +14,8 @@ phases:
         commands:
             - echo "this is build section inside buildspec.yml file"
             - echo "we will run some tests"
+            - echo "$TRAN_RUNTIME"
+            - echo $TRAN_RUNTIME
             - export TRAN_RUNTIME="$TRAN_RUNTIME"
             - echo $TRAN_RUNTIME
             - cat transaction_log.sql
