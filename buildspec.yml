@@ -1,7 +1,7 @@
 version: 0.2
 env:
   secrets-manager:
-    TRAN_RUNTIME: "testing/alfa/transaction_runtime_user" # THis is specific for each build job
+    PASSWORD: "testing/alfa/transaction_runtime_user" # THis is specific for each build job
 phases:
     install:
         runtime-versions:
@@ -11,11 +11,11 @@ phases:
     pre_build:
         commands:
             - echo "we are in the pre build phase"
-            - export PGPASSWORD=$TRAN_RUNTIME
+            - export PGPASSWORD=$PASSWORD
     build:
         commands:
             - echo "Running SQL file"
-            - bash run_sql.sh $TRAN_RUNTIME
+            - bash run_sql.sh $PASSWORD
     post_build:
         commands:
             - echo "we are in the post build phase"
