@@ -3,9 +3,9 @@ $do$
 BEGIN
    IF NOT EXISTS (
       SELECT FROM pg_catalog.pg_roles
-      WHERE  rolname = 'runtime_user8') THEN
+      WHERE  rolname = 'runtime_user9') THEN
 
-        CREATE ROLE runtime_user8 WITH
+        CREATE ROLE runtime_user9 WITH
         LOGIN
         NOSUPERUSER
         NOCREATEDB
