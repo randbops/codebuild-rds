@@ -13,7 +13,7 @@ BEGIN
         INHERIT
         NOREPLICATION
         CONNECTION LIMIT -1
-        PASSWORD 'PASSWORD';
+        PASSWORD 'ROLE_PASSWORD';
 
         COMMENT ON ROLE runtime_user IS 'User used by the UK ETS application to perform DB operations.';
 
