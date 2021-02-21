@@ -1,11 +1,5 @@
 version: 0.2
-env:
-  variables:
-    SQL_FILE: "transaction_runtime.sql"
-    HOST: "database-1.c1lhknn6bc0m.eu-west-2.rds.amazonaws.com"
-    DATABASE: "postgres"
-  secrets-manager:
-    ROLE_PASSWORD: "testing/alfa/transaction_runtime_user" # THis is specific for each build job
+
 phases:
     install:
         runtime-versions:

@@ -1,5 +1,11 @@
 version: 0.2
-
+env:
+  variables:
+    SQL_FILE: "transaction_runtime.sql"
+    HOST: "database-1.c1lhknn6bc0m.eu-west-2.rds.amazonaws.com"
+    DATABASE: "postgres"
+  secrets-manager:
+    ROLE_PASSWORD: "testing/alfa/transaction_runtime_user" # THis is specific for each build job
 phases:
     install:
         runtime-versions:
@@ -9,11 +15,11 @@ phases:
     pre_build:
         commands:
             - echo "we are in the pre build phase"
-            - export PGPASSWORD=$TRAN_RUNTIME
+            - export PGPASSWORD=$ROLE_PASSWORD
     build:
         commands:
             - echo "Running SQL file"
-            - bash run_sql.sh $TRAN_RUNTIME
+            - bash run_sql.sh $SQL_FILE $HOST $DATABASE $ROLE_PASSWORD
     post_build:
         commands:
             - echo "we are in the post build phase"
